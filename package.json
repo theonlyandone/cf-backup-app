@@ -1,12 +1,16 @@
 {
   "name": "cf-backup-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Creates backups of databases scheduled by cron expression",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Emanuel Huser",
+  "dependencies": {
+    "node-cron": "1.1.2",
+    "request": "2.74.0"
+  }
 }

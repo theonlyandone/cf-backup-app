@@ -1,5 +1,6 @@
 # Automatic backup job - NodeJs
-This app is running on the App Cloud and creates and deletes backups for the DBs.
+This app is running on the Swisscom App Cloud and creates and deletes backups for the databases in your space.
+
 ## What to do after download
 1. add your specific services guid to config.js file
 2. upload app to your space

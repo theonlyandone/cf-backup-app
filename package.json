@@ -1,6 +1,6 @@
 {
   "name": "cf-backup-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates backups of databases scheduled by cron expression in Swisscom App Cloud",
   "main": "app.js",
   "scripts": {

@@ -80,7 +80,8 @@ function getOptionsForToken() {
     url: url,
     headers: {
       "content-type": "application/x-www-form-urlencoded",
-      "cache-control": "no-cache"
+      "cache-control": "no-cache",
+      "authorization": "Basic Y2Y6"
     },
     form: {
       grant_type: "password",

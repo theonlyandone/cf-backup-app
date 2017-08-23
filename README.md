@@ -19,17 +19,22 @@ $ cf push
 ```
 
 ### 3. Modify app environment variables in developer portal
-You need to change USERNAME and PASSWORD at least. The other other variables are optional and set to default values.
+You need to change USERNAME and PASSWORD at least. You can use your own credentials or a technical user to authenticate on the APIs.
+The other variables are optional and set to default values.
 Hint: you can preset all the ENV variables in the manifest.yml file.
 
 #### Cloud foundry environment variables
 Configurable in Swisscom Developer Portal
 - **CRON_EXPRESSION**: cron expression for backup schedule, default: 0 1 * * *
 - **BACKUP_COUNT**: how many backups should be stored (MAX 30), default: 28
-- **USERNAME**: username swisscom app cloud developer portal
-- **PASSWORD**: password swisscom app cloud developer portal
+- **USERNAME**: your own username or a technical user username
+- **PASSWORD**: your own password or a technical user password
 - **CF_LOGIN_URL**: "https://login.lyra-836.appcloud.swisscom.com/oauth/token"
 - **CF_HOST_URL**:  "https://api.lyra-836.appcloud.swisscom.com"
 
 ### 4. Restart the app
 Restart the app that the new ENV values are correctly set.
+
+### Environment variables for Internal AppCloud
+- **CF_LOGIN_URL**: "https://api.scapp-console.swisscom.com"
+- **CF_HOST_URL**:  "https://login.scapp-console.swisscom.com/oauth/token"

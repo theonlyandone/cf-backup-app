@@ -35,6 +35,6 @@ Configurable in Swisscom Developer Portal
 ### 4. Restart the app
 Restart the app that the new ENV values are correctly set.
 
-### Environment variables for Internal AppCloud
+### Environment variables for Swisscom Internal AppCloud
 - **CF_LOGIN_URL**: "https://api.scapp-console.swisscom.com"
 - **CF_HOST_URL**:  "https://login.scapp-console.swisscom.com/oauth/token"

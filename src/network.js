@@ -96,7 +96,7 @@ function getOptionsForToken() {
 
 function deleteBackups(backups) {
   backups.sort( (bOne, bTwo) => {
-    return new Date(bOne.metadata.created_at) > new Date(bTwo.metadata.created_at);
+    return new Date(bOne.metadata.created_at) - new Date(bTwo.metadata.created_at);
   });
 
   while ( backups.length > process.env.BACKUP_COUNT ) {

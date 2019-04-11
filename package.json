@@ -1,5 +1,5 @@
 {
-  "name": "cf-backup-app",
+  "name": "backup",
   "version": "1.0.1",
   "description": "Creates backups of databases scheduled by cron expression in Swisscom App Cloud",
   "main": "app.js",
@@ -10,7 +10,7 @@
   "keywords": [],
   "author": "Emanuel Huser",
   "dependencies": {
-    "node-cron": "1.1.2",
-    "request": "2.74.0"
+    "node-cron": "1.2.1",
+    "request": "2.87.0"
   }
 }

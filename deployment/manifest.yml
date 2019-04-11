@@ -1,0 +1,17 @@
+applications:
+- name: backup-rotation
+  buildpack: https://github.com/cloudfoundry/nodejs-buildpack.git
+  command: node app.js
+  disk_quota: 256M
+  env:
+    CF_HOST_URL: https://api.scapp-console.swisscom.com
+    CF_LOGIN_URL: https://login.scapp-console.swisscom.com/oauth/token
+    BACKUP_COUNT_TOTAL: 30
+    BACKUP_COUNT_HOURLY: 10
+    CRON_EXPRESSION: 0 * * * *
+    NODE_ENV: production
+  instances: 1
+  memory: 128M
+  no-route: true
+  services:
+  - cf-backup-creds

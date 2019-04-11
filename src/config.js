@@ -1,24 +1,17 @@
 var Environment = require('./environment');
 
-  // add your own environments with services
-  // you need the service name and the service guid
+// add your own environments with services
+// you need the service name and the service guid
+// If you click on the left pane on your bounded service in your space than the service guid is in the browser-url visible.
 
-  // minimum one environment is necessary with one service
+// minimum one environment is necessary with one service
 
 exports.environments = function environments() {
-  var environments = [];
+    var environments = [];
 
-  // sample for environment for development space, remove or add your own values
-  var environmentDev = new Environment("sample-dev");
-  environmentDev.addServiceForBackup("sample-mariadb-dev", "1234567-bbbb-cccc-dddd-123456789012");
-  environmentDev.addServiceForBackup("sample-mongoDB-dev", "1234567-bbbb-cccc-dddd-123456789012");
-  environments.push(environmentDev);
+    var environmentProd = new Environment("my-environment");
+    environmentProd.addServiceForBackup("myfunny-db", "a1b2c3d4-1234-5678-9012-abcd8000abcd");
+    environments.push(environmentProd);
 
-  // sample for environment for production space, remove or add your own values
-  var environmentProd = new Environment("sample-prod");
-  environmentProd.addServiceForBackup("sample-mariadb-prod", "1234567-bbbb-cccc-dddd-123456789012");
-  environmentProd.addServiceForBackup("sample-mongoDB-prod", "1234567-bbbb-cccc-dddd-123456789012");
-  environments.push(environmentProd);
-
-  return environments;
-}
+    return environments;
+};
